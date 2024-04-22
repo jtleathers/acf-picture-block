@@ -1,0 +1,17 @@
+{
+    "name": "acf/picture",
+    "title": "Picture",
+    "description": "A custom picture block that uses ACF.",
+    "style": [ "file:./picture.css" ],
+    "category": "media",
+    "icon": "images-alt",
+    "keywords": ["picture"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "picture.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false
+    }
+}
