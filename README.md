@@ -9,3 +9,8 @@ The following files from this repo can be placed inside of the 'blocks/picture' 
 For any of that to work, the following line of code needs to be added into the fwd-acf-blocks.php file. *Make sure you put it in the correct place!*
 
 `register_block_type( __DIR__ . '/blocks/picture' );`
+
+Once those files and that line of code have been added, you can can import the field group. Use the provided file: 
+ - acf-picture-field-group.json
+
+Test it out! Modify it! Make it better!
