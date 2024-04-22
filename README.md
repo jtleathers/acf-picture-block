@@ -7,4 +7,5 @@ The following files from this repo can be placed inside of the 'blocks/picture' 
  - picture.php
 
 For any of that to work, the following line of code needs to be added into the fwd-acf-blocks.php file. *Make sure you put it in the correct place!*
+
 `register_block_type( __DIR__ . '/blocks/picture' );`
