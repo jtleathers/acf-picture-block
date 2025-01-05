@@ -24,21 +24,21 @@ if ( get_field( 'large_breakpoint' ) ) {
 }
 
 // Support custom "id" values.
-$anchor = 'picture-block-' . wp_rand( 100, 999 );
+$block_id = 'picture-block-' . wp_rand( 100, 999 );
 if ( ! empty( $block['anchor'] ) ) {
-	$anchor = esc_attr( $block['anchor'] );
+	$block_id = esc_attr( $block['anchor'] );
 }
 
 // Support custom "class" values.
-$class_name = 'picture-block';
+$class_names = 'picture-block';
 if ( ! empty( $block['className'] ) ) {
-	$class_name .= ' ' . $block['className'];
+	$class_names .= ' ' . $block['className'];
 }
 
 ?>
 
 <?php if ( 'art-direction' === $picture_type && $small_screen_image ) : ?>
-	<picture id="<?php echo esc_attr( $anchor ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
+	<picture <?php echo get_block_wrapper_attributes( array( 'class' => $class_names, 'id' => $block_id ) ); ?>>
 		<?php if ( $large_screen_image ) : ?>
 			<source 
 				srcset="<?php echo esc_attr( $large_screen_image['url'] ); ?>" 
@@ -60,7 +60,7 @@ if ( ! empty( $block['className'] ) ) {
 			>
 	</picture>
 <?php elseif ( 'file-type' === $picture_type && $fallback_image && $preferred_image ) : ?>
-	<picture id="<?php echo esc_attr( $anchor ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
+	<picture <?php echo get_block_wrapper_attributes( array( 'class' => $class_names, 'id' => $block_id ) ); ?>>
 		<source 
 			srcset="<?php echo esc_attr( $preferred_image['url'] ); ?>" 
 			type="<?php echo esc_attr( $preferred_image['mime_type'] ); ?>"

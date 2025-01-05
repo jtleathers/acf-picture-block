@@ -1,17 +1,21 @@
 {
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
     "name": "acf/picture",
+	"version": "1.0.0",
     "title": "Picture",
     "description": "A custom picture block that uses ACF.",
-    "style": [ "file:./picture.css" ],
     "category": "media",
     "icon": "images-alt",
     "keywords": ["picture"],
     "acf": {
         "mode": "preview",
-        "renderTemplate": "picture.php"
+        "renderTemplate": "render.php"
     },
     "supports": {
         "anchor": true,
         "align": false
-    }
+    },
+	"textdomain": "picture",
+	"style": "file:./style.css"
 }
