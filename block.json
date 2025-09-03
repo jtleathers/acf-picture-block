@@ -17,5 +17,5 @@
         "align": false
     },
 	"textdomain": "picture",
-	"style": "file:./style.css"
+	"style": "file:./style-index.css"
 }
