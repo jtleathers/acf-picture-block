@@ -2,12 +2,14 @@
 This is a guide for adding an ACF custom block that outputs an HTML picture element. It is intended to be completed following the in-class exercise during the FWDP 3600 course.
 
 In your mindset-blocks/src folder run the following command and create a dynamic block:
-`npx @wordpress/create-block@latest --no-plugin`
+`npx @wordpress/create-block@latest --no-plugin --variant dynamic picture`
 
-Don't worry about the answers to the questions in the terminal, you will replace the files with these files in this repo:
+Replace the code in the following files with what is in this repo:
  - block.json
  - render.php
  - style.scss
+
+All other files in the `picture` folder can be deleted.
 
 In the terminal run this command:
 `npm run build`
